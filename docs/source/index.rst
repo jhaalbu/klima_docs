@@ -38,22 +38,22 @@ Videre gir den moglegheit for å velje forskjellige type sampleplot
 
 Klimaoversikt:
 
-+ Gjennomsnittleg månedstemperatur og nedbør.
+   * Gjennomsnittleg månedstemperatur og nedbør.
 
-+ Fordeling av snømengde gjennom året, med snitt, max og min sammen med temperatur.
+   * Fordeling av snømengde gjennom året, med snitt, max og min sammen med temperatur.
 
-+ Åresnedbør tilbake i tid.
+   * Åresnedbør tilbake i tid.
 
-+ Årleg maksimal snødjupne tilbake i tid.
+   * Årleg maksimal snødjupne tilbake i tid.
 
 
 Klimaoversikt med 3 døgn snø og returverdi:
 
 Dette gir dei samme plotta som for klimaoversikt men i tilleg:
 
-+ 3 døgns snø mengde
+   + 3 døgns snø mengde
 
-+ Returverdi for 3 døgns snø basert på gumbelfordeling
+   + Returverdi for 3 døgns snø basert på gumbelfordeling
 
 
 Dersom ein ynskjer å få verdier plotta ut på plot for gjennomsnittleg måndestemperatur og nedøbr er det mulig å huka av for å vise tall på normalplott
@@ -63,11 +63,11 @@ Dersom ein ynskjer ei vindanalyse for klimapunktet kan ein huke av for å køyre
 
 Det blir da lasta ned datasett for vind og følgande plott blir generert:
 
-+ Vindrose for vindretning uansett nedbør eller ikkje, delt inn i vindstyrker
+   + Vindrose for vindretning uansett nedbør eller ikkje, delt inn i vindstyrker
 
-+ Vindrose for vindretning med regn, delt inn i mm regn (rrl)
+   + Vindrose for vindretning med regn, delt inn i mm regn (rrl)
 
-+ Vindrose for vindretning med nynsø siste døgn (fsw), delt inn i cm snø
+   + Vindrose for vindretning med nynsø siste døgn (fsw), delt inn i cm snø
 
 .. toctree::
    :maxdepth: 2

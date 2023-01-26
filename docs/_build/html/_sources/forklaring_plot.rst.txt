@@ -1,5 +1,7 @@
 Forklaring av plott
 ====================================
+Forklaringer på korleis dei forskjellige plott blir generert.
+
 
 Gjennomsnittleg månedsnedbør og temperatur
 ------------------------------------------
