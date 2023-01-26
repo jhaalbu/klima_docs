@@ -27,6 +27,8 @@ https://senorge.no/Models
 
 Der er det vidare henvisning til vitenskaplige artiklar som skildrar metodane i detalj
 
+Scriptet er delt inn i to moduler, og det er relativt enkelt å hente ned kildekode og f.eks nytte seg av funksjonane for å tilpasse egne plot.
+
 
 Bruksanvisning
 --------------
@@ -66,9 +68,10 @@ Det blir da lasta ned datasett for vind og følgande plott blir generert:
    :maxdepth: 2
    :caption: Contents:
 
+   forklaring_plot
    databearbeiding
    plotfunksjoner
-   forklaring_plot
+   
 
 Indices and tables
 ==================

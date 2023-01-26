@@ -1,4 +1,4 @@
-Forklaring på dei forsjellige plot
+Forklaring av plott
 ====================================
 
 Gjennomsnittleg månedsnedbør og temperatur
@@ -90,8 +90,11 @@ Datasettet kan lastes ned, og NVE eksternrapport 2014/22 (https://publikasjoner.
 Vind
 ----
 Plottet har 3 subplot
+
 * Vindrose for vindretning uansett nedbør eller ikkje, delt inn i vindstyrker
+
 * Vindrose for vindretning med regn, delt inn i mm regn (rrl)
+
 * Vindrose for vindretning med nynsø siste døgn (fsw), delt inn i cm snø
 
 Det er viktig å merke seg at her blir det brukt nye parametere i forhold til tidligre plott. Generell nedbør parameter er bytta ut med "rrl" som er regn i siste døgn, og "fsw" som er snø i siste døgn.

@@ -15,7 +15,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Søk" href="search.html" />
-    <link rel="next" title="Nedhenting og bearbeiding av klimadata modul" href="databearbeiding.html" />
+    <link rel="next" title="Forklaring av plott" href="forklaring_plot.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -47,6 +47,7 @@ klimanalaysar.</p>
 <p>Lenke til forklaring for generering av datasett:</p>
 <p><a class="reference external" href="https://senorge.no/Models">https://senorge.no/Models</a></p>
 <p>Der er det vidare henvisning til vitenskaplige artiklar som skildrar metodane i detalj</p>
+<p>Scriptet er delt inn i to moduler, og det er relativt enkelt å hente ned kildekode og f.eks nytte seg av funksjonane for å tilpasse egne plot.</p>
 </section>
 <section id="bruksanvisning">
 <h2>Bruksanvisning<a class="headerlink" href="#bruksanvisning" title="Permalink to this heading">¶</a></h2>
@@ -73,6 +74,16 @@ Videre gir den moglegheit for å velje forskjellige type sampleplot</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="forklaring_plot.html">Forklaring av plott</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#gjennomsnittleg-manedsnedbor-og-temperatur">Gjennomsnittleg månedsnedbør og temperatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#periode-med-sno">Periode med snø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#arsnedbor">Årsnedbør</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#maksiaml-snodybde">Maksiaml snødybde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#maksimal-3-dogns-nysnodybde">Maksimal 3 døgns nysnødybde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#ekstremverdier-3-dogn-sno">Ekstremverdier 3 døgn snø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#vind">Vind</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="databearbeiding.html">Nedhenting og bearbeiding av klimadata modul</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="databearbeiding.html#klimadata.klimadata.hent_data_klima_dogn"><code class="docutils literal notranslate"><span class="pre">hent_data_klima_dogn()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="databearbeiding.html#klimadata.klimadata.hent_hogde"><code class="docutils literal notranslate"><span class="pre">hent_hogde()</span></code></a></li>
@@ -98,16 +109,6 @@ Videre gir den moglegheit for å velje forskjellige type sampleplot</p>
 <li class="toctree-l2"><a class="reference internal" href="plotfunksjoner.html#klimadata.plot.snodjupne"><code class="docutils literal notranslate"><span class="pre">snodjupne()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="plotfunksjoner.html#klimadata.plot.snomengde"><code class="docutils literal notranslate"><span class="pre">snomengde()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="plotfunksjoner.html#klimadata.plot.vind"><code class="docutils literal notranslate"><span class="pre">vind()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="forklaring_plot.html">Forklaring på dei forsjellige plot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#gjennomsnittleg-manedsnedbor-og-temperatur">Gjennomsnittleg månedsnedbør og temperatur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#periode-med-sno">Periode med snø</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#arsnedbor">Årsnedbør</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#maksiaml-snodybde">Maksiaml snødybde</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#maksimal-3-dogns-nysnodybde">Maksimal 3 døgns nysnødybde</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#ekstremverdier-3-dogn-sno">Ekstremverdier 3 døgn snø</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forklaring_plot.html#vind">Vind</a></li>
 </ul>
 </li>
 </ul>
@@ -142,16 +143,16 @@ Videre gir den moglegheit for å velje forskjellige type sampleplot</p>
 <h3>Navigering</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="forklaring_plot.html">Forklaring av plott</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databearbeiding.html">Nedhenting og bearbeiding av klimadata modul</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plotfunksjoner.html">Modul for plotting av klimadata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="forklaring_plot.html">Forklaring på dei forsjellige plot</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="databearbeiding.html" title="neste kapittel">Nedhenting og bearbeiding av klimadata modul</a></li>
+      <li>Next: <a href="forklaring_plot.html" title="neste kapittel">Forklaring av plott</a></li>
   </ul></li>
 </ul>
 </div>
