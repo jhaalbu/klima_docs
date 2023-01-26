@@ -7,14 +7,14 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 @st.cache
-def nve_api(lat: str, lon: str, startdato: str, sluttdato: str, para: str) -> list:
+def nve_api(x: str, y: str, startdato: str, sluttdato: str, para: str) -> list:
     """Henter data frå NVE api GridTimeSeries
 
     Parameters
     ----------
-        lat 
+        lon 
             øst koordinat (i UTM33)
-        lon  
+        lat  
             nord koordinat (i UTM33)
         startdato
             startdato for dataserien som hentes ned
@@ -33,9 +33,9 @@ def nve_api(lat: str, lon: str, startdato: str, sluttdato: str, para: str) -> li
     url = (
         api
         + "/GridTimeSeries/"
-        + str(lat)
+        + str(x)
         + "/"
-        + str(lon)
+        + str(y)
         + "/"
         + str(startdato)
         + "/"
@@ -50,7 +50,7 @@ def nve_api(lat: str, lon: str, startdato: str, sluttdato: str, para: str) -> li
     return verdier
 
 @st.cache
-def stedsnavn(utm_nord: str, utm_ost: str) -> list:
+def stedsnavn(x: str, y: str) -> list:
     """Henter stedsnavn fra geonorge api for stedsnavnsøk
     
     Koordinatsystem er hardcoda inn i request streng sammen med søkeradius
@@ -58,9 +58,9 @@ def stedsnavn(utm_nord: str, utm_ost: str) -> list:
 
     Parameters
     ----------
-        utm_nord
+        x
             nord koordinat i UTM33
-        utm_ost
+        y
             øst koordinat i UTM33
 
     Returns
@@ -69,21 +69,21 @@ def stedsnavn(utm_nord: str, utm_ost: str) -> list:
             Liste med stedsnavn innanfor radius på 500m
 
     """
-    url = f"https://ws.geonorge.no/stedsnavn/v1/punkt?nord={utm_nord}&ost={utm_ost}&koordsys=5973&radius=500&utkoordsys=4258&treffPerSide=1&side=1"
+    url = f"https://ws.geonorge.no/stedsnavn/v1/punkt?nord={y}&ost={x}&koordsys=5973&radius=500&utkoordsys=4258&treffPerSide=1&side=1"
     r = requests.get(url)
     verdier = r.json()
     # for verdi in
     return verdier
 
 
-def hent_data_klima_dogn(lat: str, lon: str, startdato: str, sluttdato: str, parametere: list) -> dict:
+def hent_data_klima_dogn(x: str, y: str, startdato: str, sluttdato: str, parametere: list) -> dict:
     """Henter ned klimadata basert på liste av parametere
 
     Parameters
     ----------
-        lat
+        x
             øst-vest koordinat (i UTM33)
-        lon
+        y
             nord-sør koordinat (i UTM33)
         startdato
             startdato for dataserien som hentes ned
@@ -101,21 +101,22 @@ def hent_data_klima_dogn(lat: str, lon: str, startdato: str, sluttdato: str, par
     parameterdict = {}
     for parameter in parametere:
 
-        parameterdict[parameter] = nve_api(lat, lon, startdato, sluttdato, parameter)[
+        parameterdict[parameter] = nve_api(x, y, startdato, sluttdato, parameter)[
             "Data"
         ]
     return parameterdict
 
 
-def klima_dataframe(lat, lon, startdato, sluttdato, parametere) -> pd.DataFrame:
-    """Lager dataframe basert på klimadata fra NVE api. Bruker underfunksjoner. Bruker
-       start og sluttdato for å generere index i pandas dataframe.
+def klima_dataframe(x, y, startdato, sluttdato, parametere) -> pd.DataFrame:
+    """Lager dataframe basert på klimadata fra NVE api.
+
+    Bruker start og sluttdato for å generere index i pandas dataframe.
 
     Parameters
     ----------
-        lat
-            øst-vest koordinat (i UTM33)
         lon
+            øst-vest koordinat (i UTM33)
+        lat
             nord-sør koordinat (i UTM33)
         startdato
             startdato for dataserien som hentes ned
@@ -133,7 +134,7 @@ def klima_dataframe(lat, lon, startdato, sluttdato, parametere) -> pd.DataFrame:
     parameterdict = {}
     for parameter in parametere:
 
-        parameterdict[parameter] = nve_api(lat, lon, startdato, sluttdato, parameter)[
+        parameterdict[parameter] = nve_api(x, y, startdato, sluttdato, parameter)[
             "Data"
         ]
 
@@ -154,14 +155,14 @@ def klima_dataframe(lat, lon, startdato, sluttdato, parametere) -> pd.DataFrame:
     return df
 
 @st.cache
-def hent_hogde(lon: str, lat: str) -> str:
+def hent_hogde(x: str, y: str) -> str:
     """Henter ned høgdeverdi for koordinat fra NVE api
 
     Parameters
     ----------
-        lat
+        x
             øst-vest koordinat (i UTM33)
-        lon
+        y
             nord-sør koordinat (i UTM33)
 
     Returns
@@ -171,7 +172,7 @@ def hent_hogde(lon: str, lat: str) -> str:
 
     """
 
-    return str(nve_api(lon, lat, '01-01-2022', '01-01-2022', 'rr') ['Altitude'])
+    return str(nve_api(x, y, '01-01-2022', '01-01-2022', 'rr') ['Altitude'])
 
  
 

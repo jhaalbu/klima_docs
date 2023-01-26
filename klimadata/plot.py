@@ -557,6 +557,7 @@ def snomengde(df: pd.DataFrame, ax1=None) -> plt.Axes:
     '''Funksjon for å plotte snomengde i løpet av året for normalperiode 1991-2020
     
     Funksjonen filtrerer ut data for normalperiode 1991-2020.
+    Funksjonen glatter ut plottet ved å bruke 7-dagers glidende snitt.
     Deretter beregnes snitt, max og min verdier for kvar dag i året, og legges til i en ny dataframe.
 
     Parameters

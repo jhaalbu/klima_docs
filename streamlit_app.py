@@ -11,7 +11,7 @@ from streamlit_folium import st_folium
 
 
 st.header("AV-Klima")
-
+st.write("Enkel webapp for uthenting av klimaanalyser fra NVE grid times series API")
 # Setter liste med parametere brukt i analyse, tenkt å kunne utvides
 parameterliste = ["rr", "tm", "sd", "fsw", "sdfsw", "sdfsw3d"]
 
@@ -35,32 +35,33 @@ folium.raster_layers.WmsTileLayer(
 m.add_child(folium.ClickForMarker(popup="Waypoint"))
 output = st_folium(m, width=700, height=500)
 
-utm_lat = 0
-utm_lon = 0
+x = 0
+y = 0
 st.write("Trykk i kartet, eller skriv inn koordinater for å velge klimapunkt.")
+st.write("Dersom du velger koordinat uten data, f.eks ved kyst eller midt i fjord vil du få feilmelding.")
 st.write(
-    "Finn automatisk nærmaste stadnavn dersom det er eit navn innafor 500m radius."
+    "Finner automatisk nærmaste stadnavn dersom det er eit navn innafor 500m radius."
 )
 
 # Enkel måte å vente på klikk i kartet
 try:
     kart_kord_lat = output["last_clicked"]["lat"]
     kart_kord_lng = output["last_clicked"]["lng"]
-    utm_ost, utm_nord = transformer.transform(kart_kord_lat, kart_kord_lng)
-    utm_nord = round(utm_nord, 2)
-    utm_ost = round(utm_ost, 2)
+    x, y = transformer.transform(kart_kord_lat, kart_kord_lng)
+    y = round(y, 2)
+    x = round(x, 2)
 
 except TypeError:
-    utm_nord = "Trykk i kart, eller skriv inn koordinat"
-    utm_ost = "Trykk i kart, eller skriv inn koordinat"
+    y = "Trykk i kart, eller skriv inn koordinat"
+    x = "Trykk i kart, eller skriv inn koordinat"
 
-# Lat, lon begrep henger igjen etter gamle versjon av script, trenger opprydding
-lat = st.text_input("NORD(UTM 33)", utm_nord)
-lon = st.text_input("ØST  (UTM 33)", utm_ost)
+
+y = st.text_input("NORD(UTM 33)", y)
+x = st.text_input("ØST  (UTM 33)", x)
 
 # Venter på klikk, og prøver å finne stedsnavn
 try:
-    navn = klimadata.stedsnavn(utm_nord, utm_ost)["navn"][0]["stedsnavn"][0][
+    navn = klimadata.stedsnavn(x, y)["navn"][0]["stedsnavn"][0][
         "skrivemåte"
     ]
 except (IndexError, KeyError):
@@ -88,10 +89,10 @@ vind = st.checkbox("Vindanalyse")
 knapp = st.button("Vis plott")
 
 if knapp:
-    lon = int(float(lon.strip()))
-    lat = int(float(lat.strip()))
-    df = klimadata.klima_dataframe(lon, lat, startdato, sluttdato, parameterliste)
-    st.write(f'Modellhøgden frå punktet er {klimadata.hent_hogde(lon, lat)} moh. Denne kan avvike fra faktisk terrenghøgde.')
+    y = int(float(y.strip()))
+    x = int(float(x.strip()))
+    df = klimadata.klima_dataframe(x, y, startdato, sluttdato, parameterliste)
+    st.write(f'Modellhøgden frå punktet er {klimadata.hent_hogde(x, y)} moh. Denne kan avvike fra faktisk terrenghøgde.')
     if plottype == "Klimaoversikt":
         st.write("Trykk på pil oppe i høgre hjørne for å utvide plot")
         st.pyplot(plot.klimaoversikt(df, lokalitet, annotert))
@@ -124,7 +125,7 @@ if knapp:
         ]
         vindslutt = "2022-03-01"
         vindstart = "2018-03-01"
-        vind_df = klimadata.klima_dataframe(lon, lat, vindstart, vindslutt, vind_para)
+        vind_df = klimadata.klima_dataframe(x, y, vindstart, vindslutt, vind_para)
         st.pyplot(plot.vind(vind_df))
         st.download_button(
             "Last ned vinddata",
