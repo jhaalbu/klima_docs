@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+
+<html lang="nb-NO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Modul for plotting av klimadata &#8212; AV-Klima  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Søk" href="search.html" />
+    <link rel="next" title="Forklaring på dei forsjellige plot" href="forklaring_plot.html" />
+    <link rel="prev" title="Nedhenting og bearbeiding av klimadata modul" href="databearbeiding.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="modul-for-plotting-av-klimadata">
+<h1>Modul for plotting av klimadata<a class="headerlink" href="#modul-for-plotting-av-klimadata" title="Permalink to this heading">¶</a></h1>
+<img alt="_images/normaler.jpg" src="_images/normaler.jpg" />
+<span class="target" id="module-klimadata.plot"></span><dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.klima_sno_oversikt">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">klima_sno_oversikt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lokalitet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotert</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#klimadata.plot.klima_sno_oversikt" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Funksjonen lager sampleplot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe med klimadata</p></li>
+<li><p><strong>lokalitet</strong> – Navn på klimapunktet</p></li>
+<li><p><strong>annotert</strong> – Boolsk verdi som avgjør om det skal lages annotert plot eller ikkje</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Returns</dt><dd><blockquote>
+<div><dl class="simple">
+<dt>fig</dt><dd><p>Plott-objekt med 6 subplot</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.klimaoversikt">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">klimaoversikt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lokalitet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotert</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Figure</span></span></span><a class="headerlink" href="#klimadata.plot.klimaoversikt" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Funksjonen lager sampleplot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe med klimadata</p></li>
+<li><p><strong>lokalitet</strong> – Navn på klimapunktet</p></li>
+<li><p><strong>annotert</strong> – Boolsk verdi som avgjør om det skal lages annotert plot eller ikkje</p></li>
+<li><p><strong>Returns</strong> – </p></li>
+<li><p><strong>-------</strong> – <dl class="simple">
+<dt>fig</dt><dd><p>Plott-objekt med 4 subplot</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.normaler_annotert">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">normaler_annotert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">klima</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.normaler_annotert" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Tar imot klimadataframe, og returnerer ax plotteobjekt fra matplotlib.
+Funksjonen plotter normalverdier for nedbør og temperatur for perioden 1991-2020.
+Kan kombineres i samleplot, eller stå aleine.
+Finnes ein søsterfunksjon uten tall på plottet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>klima</strong> – Klimadataframe fra klimadata.py</p>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p>Plotteobjekt fra matplotlib</p>
+</dd>
+<dt class="field-odd">Retur type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ax1</p>
+</dd>
+</dl>
+<p>TODO: Kan samkøyrast med generell normalplot</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.nysnodjupne_3d">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">nysnodjupne_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.nysnodjupne_3d" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Tar inn klimadataframe og returnerer plot for 3 døgns nysnødjupne</p>
+<p>Plottet bruker parameteren sdfsw3d - Nynsødybde 3 døgn frå NVE api</p>
+<p>Se <a class="reference external" href="https://senorge.no/Models">https://senorge.no/Models</a> for mer informasjon om måten data er generert
+Det anbefales å sette seg inn i måten datasettet regner om frå mm vann til cm snø.</p>
+<p>Plottet tar ut snittverdier for normalperiode 1961-1990 og 1991-2020 samt for heile perioden.
+Det blir også rekna ut ein trend for heile datasettet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> – pandas dataframe med klimadata</p>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p>Matplotlib axes objekt med snødjupne plot</p>
+</dd>
+<dt class="field-odd">Retur type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ax1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.plot_aarsnedbor">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">plot_aarsnedbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.plot_aarsnedbor" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Tar inn klimadataframe og returnerer plot for snødjupne
+Plottet bruker parameteren rr - Døgnnedbør v2.0 - mm frå NVE api
+Denne returnerer døgnnedbør i mm
+Se <a class="reference external" href="https://senorge.no/Models">https://senorge.no/Models</a> for mer informasjon om måten data er generert</p>
+<p>Plottet tar ut snittverdier for normalperiode 1961-1990 og 1991-2020 samt for heile perioden.
+Det blir også rekna ut ein trend for heile datasettet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> – pandas dataframe med klimadata</p>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p>Matplotlib axes objekt med døgnnedbør plot</p>
+</dd>
+<dt class="field-odd">Retur type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ax1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.plot_normaler">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">plot_normaler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">klima</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.plot_normaler" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Tar imot klimadataframe, og returnerer ax plotteobjekt fra matplotlib.
+Funksjonen plotter normalverdier for nedbør og temperatur for perioden 1991-2020.</p>
+<p>Kan kombineres i samleplot, eller stå aleine.
+Finnes ein søsterfunksjon som skriver ut tall på plottet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>klima</strong> – Klimadataframe fra klimadata.py</p>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p>Plotteobjekt fra matplotlib</p>
+</dd>
+<dt class="field-odd">Retur type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ax1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.snodjupne">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">snodjupne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.snodjupne" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Tar inn klimadataframe og returnerer plot for snødjupne</p>
+<p>Plottet bruker parameteren sd - Snødybde v2.0.1 frå NVE api.
+Denne returnerer snødybde i cm.</p>
+<p>Se <a class="reference external" href="https://senorge.no/Models">https://senorge.no/Models</a> for meir informasjon om måten data er generert</p>
+<p>Plottet tar ut snittverdier for normalperiode 1961-1990 og 1991-2020 samt for heile perioden.
+Det blir også rekna ut ein trend for heile datasettet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> – pandas dataframe med klimadata</p>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p>Matplotlib axes objekt med snødjupne plot</p>
+</dd>
+<dt class="field-odd">Retur type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ax1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.snomengde">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">snomengde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.snomengde" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Funksjon for å plotte snomengde i løpet av året for normalperiode 1991-2020</p>
+<p>Funksjonen filtrerer ut data for normalperiode 1991-2020.
+Funksjonen glatter ut plottet ved å bruke 7-dagers glidende snitt.
+Deretter beregnes snitt, max og min verdier for kvar dag i året, og legges til i en ny dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Klimadataframe</p></li>
+<li><p><strong>ax1</strong> – Plott-objekt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ax1</em> – Plott-objekt med snødager</p></li>
+<li><p><em>ax2</em> – Plott-objekt med temperatur</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="klimadata.plot.vind">
+<span class="sig-prename descclassname"><span class="pre">klimadata.plot.</span></span><span class="sig-name descname"><span class="pre">vind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vind_df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Axes</span></span></span><a class="headerlink" href="#klimadata.plot.vind" title="Permalink til denne definisjonen">¶</a></dt>
+<dd><p>Funksjon for å plotte vind mot nedbør og snø</p>
+<dl class="simple">
+<dt>Plottet lager 3 subplots:</dt><dd><ol class="arabic simple">
+<li><p>Vindrose for vindretning uansett nedbør eller ikkje, delt inn i vindstyrker</p></li>
+<li><p>Vindrose for vindretning med regn, delt inn i mm regn</p></li>
+<li><p>Vindrose for vindretning med nynsø siste døgn (fsw), delt inn i cm snø</p></li>
+</ol>
+</dd>
+</dl>
+<p>Ved tolking av vindrose må ein både sjå på % antall dager, men også på kva mengde som kjem ved kvar vindretning
+det kan f.eks være flest dager frå vest, men dagene med virkelig snøfall kan komme fra andre retninger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametere<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vind_df</strong> – Dataframe med vinddata fra mars 2018 til mars 2022</p>
+</dd>
+<dt class="field-even">Returnere<span class="colon">:</span></dt>
+<dd class="field-even"><p>Plott-objekt med 3 subplot</p>
+</dd>
+<dt class="field-odd">Retur type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>fig</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">AV-Klima</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigering</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="databearbeiding.html">Nedhenting og bearbeiding av klimadata modul</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modul for plotting av klimadata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.klima_sno_oversikt"><code class="docutils literal notranslate"><span class="pre">klima_sno_oversikt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.klimaoversikt"><code class="docutils literal notranslate"><span class="pre">klimaoversikt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.normaler_annotert"><code class="docutils literal notranslate"><span class="pre">normaler_annotert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.nysnodjupne_3d"><code class="docutils literal notranslate"><span class="pre">nysnodjupne_3d()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.plot_aarsnedbor"><code class="docutils literal notranslate"><span class="pre">plot_aarsnedbor()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.plot_normaler"><code class="docutils literal notranslate"><span class="pre">plot_normaler()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.snodjupne"><code class="docutils literal notranslate"><span class="pre">snodjupne()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.snomengde"><code class="docutils literal notranslate"><span class="pre">snomengde()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klimadata.plot.vind"><code class="docutils literal notranslate"><span class="pre">vind()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forklaring_plot.html">Forklaring på dei forsjellige plot</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="databearbeiding.html" title="Forrige kapittel">Nedhenting og bearbeiding av klimadata modul</a></li>
+      <li>Next: <a href="forklaring_plot.html" title="neste kapittel">Forklaring på dei forsjellige plot</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Hurtigsøk</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Gå" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/plotfunksjoner.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

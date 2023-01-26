@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html lang="nb-NO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Forklaring på dei forsjellige plot &#8212; AV-Klima  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Søk" href="search.html" />
+    <link rel="prev" title="Modul for plotting av klimadata" href="plotfunksjoner.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="forklaring-pa-dei-forsjellige-plot">
+<h1>Forklaring på dei forsjellige plot<a class="headerlink" href="#forklaring-pa-dei-forsjellige-plot" title="Permalink to this heading">¶</a></h1>
+<section id="gjennomsnittleg-manedsnedbor-og-temperatur">
+<h2>Gjennomsnittleg månedsnedbør og temperatur<a class="headerlink" href="#gjennomsnittleg-manedsnedbor-og-temperatur" title="Permalink to this heading">¶</a></h2>
+<p>Filterer data ned til siste normalperiode,  1991-2020.</p>
+<p>Gjennomsnittleg temperatur og nedbnør for kvar månad blir rekna.</p>
+<p>Parameter som er brukt er «rr» for nedbør og «tm» for temperatur.</p>
+<p>Plottet kan vises med tall på kvar søyle og temperaturpunkt, samt maksimal og minimal måntleg snittemperatur ved å velje annotert plot.</p>
+<a class="reference internal image-reference" href="_images/normaler.png"><img alt="_images/normaler.png" src="_images/normaler.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/normaler_annotert.png"><img alt="_images/normaler_annotert.png" src="_images/normaler_annotert.png" style="width: 400px;" /></a>
+</section>
+<section id="periode-med-sno">
+<h2>Periode med snø<a class="headerlink" href="#periode-med-sno" title="Permalink to this heading">¶</a></h2>
+<p>Plot som viser snømengden gjennom året, sammen med gjennomsnittstempertur. Plottet viser kva periodar område vanlegvis har hatt snø.</p>
+<p>Både snømengde og temperatur er vist som 7-dagers glidende gjennomsnitt for å glatte ut kurvene.</p>
+<p>For snø vises også den maksimale og minimale 7-dagers glidende gjennomsnitt.</p>
+<a class="reference internal image-reference" href="_images/snøperiode.png"><img alt="_images/sn%C3%B8periode.png" src="_images/sn%C3%B8periode.png" style="width: 400px;" /></a>
+</section>
+<section id="arsnedbor">
+<h2>Årsnedbør<a class="headerlink" href="#arsnedbor" title="Permalink to this heading">¶</a></h2>
+<p>Plottet viser årsnedbør for alle år i datasettet, altså fra 1958 - 2022.</p>
+<p>Data som blir brukt i plottet er parameter «rr», som all nedbør. Denne er summert opp for heile året.</p>
+<p>Det blir rekna ut ein linær trend gjennom heile datasettet, sammen med gjennomsnitt.
+Det er også vist gjennomsnitt for både normalperiode 1991-2020 og 1961-1990.</p>
+<p>Årsnedbøren for siste normalperiode blir vist som tekst i plottet.</p>
+<a class="reference internal image-reference" href="_images/årsnedbør.png"><img alt="_images/%C3%A5rsnedb%C3%B8r.png" src="_images/%C3%A5rsnedb%C3%B8r.png" style="width: 400px;" /></a>
+</section>
+<section id="maksiaml-snodybde">
+<h2>Maksiaml snødybde<a class="headerlink" href="#maksiaml-snodybde" title="Permalink to this heading">¶</a></h2>
+<p>Plottet viser maksimal snødybde for alle år i datasettet, altså fra 1958 - 2022.</p>
+<p>Data som er brukt er parameteren «sd», som er snødybde.</p>
+<p>Årleg maksimalverdi blir henta ut, som er den høgste snødybden registert for året.</p>
+<p>Det blir rekna ut ein linær trend gjennom heile datasettet, sammen med gjennomsnitt.
+Det er også vist gjennomsnitt for både normalperiode 1991-2020 og 1961-1990.</p>
+<a class="reference internal image-reference" href="_images/snødjupne.png"><img alt="_images/sn%C3%B8djupne.png" src="_images/sn%C3%B8djupne.png" style="width: 400px;" /></a>
+</section>
+<section id="maksimal-3-dogns-nysnodybde">
+<h2>Maksimal 3 døgns nysnødybde<a class="headerlink" href="#maksimal-3-dogns-nysnodybde" title="Permalink to this heading">¶</a></h2>
+<p>Plottet viser maksimal 3 døgns nysnødybde for alle år i datasettet, altså fra 1958 - 2022.</p>
+<p>Data som er brukt er parameteren «sdfsw3d», 3 døgns nysnødybde.</p>
+<p>Maksimalverdien for året blir henta ut, og presentert i plottet.</p>
+<p>Det blir rekna ut ein linær trend gjennom heile datasettet, sammen med gjennomsnitt.
+Det er også vist gjennomsnitt for både normalperiode 1991-2020 og 1961-1990.</p>
+<p>Maksimalverdi, samt snitt for siste normalperiode blir vist som tekst.</p>
+<a class="reference internal image-reference" href="_images/nysnødybde_3d.png"><img alt="_images/nysn%C3%B8dybde_3d.png" src="_images/nysn%C3%B8dybde_3d.png" style="width: 400px;" /></a>
+</section>
+<section id="ekstremverdier-3-dogn-sno">
+<h2>Ekstremverdier 3 døgn snø<a class="headerlink" href="#ekstremverdier-3-dogn-sno" title="Permalink to this heading">¶</a></h2>
+<p>Plottet viser utrekning av ekstremverdier for 3 døgn snømengde.</p>
+<p>Årleg maksverdi av 3 døgn snømengde blir tatt ut og med ein standard gumbelfordeling for blir det rekna ut returverdier for 100, 1000 og 5000 år.
+Merk at her er det stor usikkerhet på grunn av kort datasett.
+Det anbefales å vurdere supplerande metoder for detaljerte farevurderingar.</p>
+<p>Datasettet kan lastes ned, og NVE eksternrapport 2014/22 (<a class="reference external" href="https://publikasjoner.nve.no/rapport/2014/rapport2014_22.pdf">https://publikasjoner.nve.no/rapport/2014/rapport2014_22.pdf</a>) har gode anbefalinger som gir meir presist resultat.</p>
+<a class="reference internal image-reference" href="_images/ekstremverdier_gumbel.png"><img alt="_images/ekstremverdier_gumbel.png" src="_images/ekstremverdier_gumbel.png" style="width: 400px;" /></a>
+</section>
+<section id="vind">
+<h2>Vind<a class="headerlink" href="#vind" title="Permalink to this heading">¶</a></h2>
+<p>Plottet har 3 subplot
+* Vindrose for vindretning uansett nedbør eller ikkje, delt inn i vindstyrker
+* Vindrose for vindretning med regn, delt inn i mm regn (rrl)
+* Vindrose for vindretning med nynsø siste døgn (fsw), delt inn i cm snø</p>
+<p>Det er viktig å merke seg at her blir det brukt nye parametere i forhold til tidligre plott. Generell nedbør parameter er bytta ut med «rrl» som er regn i siste døgn, og «fsw» som er snø i siste døgn.
+Vindparametere som er brukt er «windDirection10m24h06» og «windSpeed10m24h06»</p>
+<p>Vær obs på at dette er eit kortvarig datasett som går fra 2018 - 2022. Det er derfor stor usikkerhet på resultatet, særleg på dagar i låglandet der det kan vere veldig få døgn med snø, og dermed lite statisitsk grunnlag for å berekne vindrose..</p>
+<p>Ved tolking av vindrose må ein både sjå på % antall dager, men også på kva mengde som kjem ved kvar vindretning det kan f.eks være flest dager frå vest, men dagene med virkelig snøfall kan komme fra andre retninger.</p>
+<a class="reference internal image-reference" href="_images/vind.png"><img alt="_images/vind.png" src="_images/vind.png" style="width: 400px;" /></a>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">AV-Klima</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigering</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="databearbeiding.html">Nedhenting og bearbeiding av klimadata modul</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotfunksjoner.html">Modul for plotting av klimadata</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Forklaring på dei forsjellige plot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gjennomsnittleg-manedsnedbor-og-temperatur">Gjennomsnittleg månedsnedbør og temperatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#periode-med-sno">Periode med snø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arsnedbor">Årsnedbør</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maksiaml-snodybde">Maksiaml snødybde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maksimal-3-dogns-nysnodybde">Maksimal 3 døgns nysnødybde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ekstremverdier-3-dogn-sno">Ekstremverdier 3 døgn snø</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vind">Vind</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="plotfunksjoner.html" title="Forrige kapittel">Modul for plotting av klimadata</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Hurtigsøk</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Gå" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/forklaring_plot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

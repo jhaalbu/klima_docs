@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.abspath('..\..'))
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon']
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+templates_path = ['..\_templates']
+exclude_patterns = ['..\_build', 'Thumbs.db', '.DS_Store']
 
 language = 'nb_NO'
 
@@ -29,6 +29,5 @@ language = 'nb_NO'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'alabaster'
-html_static_path = ['_static']
+html_static_path = ['..\_static']
 
-pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Your Name'),]
