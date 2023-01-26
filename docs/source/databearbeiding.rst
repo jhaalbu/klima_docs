@@ -1,4 +1,6 @@
-Nedhenting og bearbeiding av klimadata modul
+Klimadata
 --------------------------------------------
+Forklaring på dei enkelte funksjoner som genererer klimadata fra NVI sitt api.
+
 .. automodule:: klimadata.klimadata
     :members:
