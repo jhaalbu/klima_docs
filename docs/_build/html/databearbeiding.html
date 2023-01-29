@@ -92,18 +92,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="forklaring_plot.html">Forklaring av plott</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Datanedlasting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.hent_data_klima_dogn"><code class="docutils literal notranslate"><span class="pre">hent_data_klima_dogn()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.hent_hogde"><code class="docutils literal notranslate"><span class="pre">hent_hogde()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.klima_dataframe"><code class="docutils literal notranslate"><span class="pre">klima_dataframe()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.maxdf"><code class="docutils literal notranslate"><span class="pre">maxdf()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.nve_api"><code class="docutils literal notranslate"><span class="pre">nve_api()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.plot_ekstremverdier_3dsno"><code class="docutils literal notranslate"><span class="pre">plot_ekstremverdier_3dsno()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.rullande_3dogn_nedbor"><code class="docutils literal notranslate"><span class="pre">rullande_3dogn_nedbor()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.stedsnavn"><code class="docutils literal notranslate"><span class="pre">stedsnavn()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.vind_nedbor"><code class="docutils literal notranslate"><span class="pre">vind_nedbor()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.vind_regn"><code class="docutils literal notranslate"><span class="pre">vind_regn()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.vind_sno_fsw"><code class="docutils literal notranslate"><span class="pre">vind_sno_fsw()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#klimadata.klimadata.vind_sno_rr_tm"><code class="docutils literal notranslate"><span class="pre">vind_sno_rr_tm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nve_api"><code class="docutils literal notranslate"><span class="pre">nve_api()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="plotfunksjoner.html">Plotfunksjoner</a></li>
@@ -177,239 +166,36 @@
   <section id="datanedlasting">
 <h1>Datanedlasting<a class="headerlink" href="#datanedlasting" title="Permalink to this heading">¶</a></h1>
 <p>Forklaring på dei enkelte funksjoner som genererer klimadata fra NVI sitt api.</p>
-<span class="target" id="module-klimadata.klimadata"></span><dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.hent_data_klima_dogn">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">hent_data_klima_dogn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startdato</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sluttdato</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parametere</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#klimadata.klimadata.hent_data_klima_dogn" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Henter ned klimadata basert på liste av parametere</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – øst-vest koordinat (i UTM33)</p></li>
-<li><p><strong>y</strong> – nord-sør koordinat (i UTM33)</p></li>
-<li><p><strong>startdato</strong> – startdato for dataserien som hentes ned</p></li>
-<li><p><strong>sluttdato</strong> – sluttdato for dataserien som hentes ned</p></li>
-<li><p><strong>parametere</strong> – liste med parametere som skal hentes ned f.eks rr for nedbør</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict med parameternavn til key, og liste med verdier som value</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>parameterdict</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.hent_hogde">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">hent_hogde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#klimadata.klimadata.hent_hogde" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Henter ned høgdeverdi for koordinat fra NVE api</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – øst-vest koordinat (i UTM33)</p></li>
-<li><p><strong>y</strong> – nord-sør koordinat (i UTM33)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>høgdeverdi for koordinat</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>høgde</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.klima_dataframe">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">klima_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startdato</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sluttdato</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parametere</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.klima_dataframe" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Lager dataframe basert på klimadata fra NVE api.</p>
-<p>Bruker start og sluttdato for å generere index i pandas dataframe.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>lon</strong> – øst-vest koordinat (i UTM33)</p></li>
-<li><p><strong>lat</strong> – nord-sør koordinat (i UTM33)</p></li>
-<li><p><strong>startdato</strong> – startdato for dataserien som hentes ned</p></li>
-<li><p><strong>sluttdato</strong> – sluttdato for dataserien som hentes ned</p></li>
-<li><p><strong>parametere</strong> – liste med parametere som skal hentes ned f.eks rr for nedbør</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>df</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.maxdf">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">maxdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.maxdf" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Tar in klimadataframe, og returnerer ny dataframe med årlige maksimalverdier</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>df</strong> – Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe med årlige maksimalverdier</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>maxdf</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.nve_api">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">nve_api</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startdato</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sluttdato</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">para</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#klimadata.klimadata.nve_api" title="Permalink til denne definisjonen">¶</a></dt>
+<dt class="sig sig-object py" id="nve_api">
+<span class="sig-name descname"><span class="pre">nve_api</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startdato</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sluttdato</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">para</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#nve_api" title="Permalink til denne definisjonen">¶</a></dt>
 <dd><p>Henter data frå NVE api GridTimeSeries</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>lon</strong> – øst koordinat (i UTM33)</p></li>
-<li><p><strong>lat</strong> – nord koordinat (i UTM33)</p></li>
-<li><p><strong>startdato</strong> – startdato for dataserien som hentes ned</p></li>
-<li><p><strong>sluttdato</strong> – sluttdato for dataserien som hentes ned</p></li>
-<li><p><strong>para</strong> – kva parameter som skal hentes ned f.eks rr for nedbør</p></li>
-</ul>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>lon</dt><dd><p>øst koordinat (i UTM33)</p>
 </dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>returnerer ei liste med klimaverdier</p>
+<dt>lat</dt><dd><p>nord koordinat (i UTM33)</p>
 </dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>verdier</p>
+<dt>startdato</dt><dd><p>startdato for dataserien som hentes ned</p>
+</dd>
+<dt>sluttdato</dt><dd><p>sluttdato for dataserien som hentes ned</p>
+</dd>
+<dt>para</dt><dd><p>kva parameter som skal hentes ned f.eks rr for nedbør</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.plot_ekstremverdier_3dsno">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">plot_ekstremverdier_3dsno</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#klimadata.klimadata.plot_ekstremverdier_3dsno" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Gammel funksjon for å jobbe med eldre tilpassing av ekstremverdiutrekning</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> – Pandas dataframe med klimadata</p></li>
-<li><p><strong>ax1</strong> – Matplotlib axis</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Ekstremverdiutrekning basert på Gumbel distribusjon</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>model</p>
+</div></blockquote>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>verdier</dt><dd><p>returnerer ei liste med klimaverdier</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.rullande_3dogn_nedbor">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">rullande_3dogn_nedbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.rullande_3dogn_nedbor" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Tar in klimadataframe og returnerer med ny kollonne med utrekna 3 døgs nedbør basert på døgnnedbør</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>dataframe</strong> – Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe med ny kollonne med utrekna 3 døgs nedbør basert på døgnnedbør</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>df</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.stedsnavn">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">stedsnavn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#klimadata.klimadata.stedsnavn" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Henter stedsnavn fra geonorge api for stedsnavnsøk</p>
-<p>Koordinatsystem er hardcoda inn i request streng sammen med søkeradius
-Radius er satt til 500m</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – nord koordinat i UTM33</p></li>
-<li><p><strong>y</strong> – øst koordinat i UTM33</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Liste med stedsnavn innanfor radius på 500m</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>verier</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.vind_nedbor">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">vind_nedbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.vind_nedbor" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Tar in vinddataframe, og returnerer ny dataframe med der nedbør (rr) under 0.2mm blir fjerna</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>df</strong> – Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe der dager med nedbør (rr) under 0.2mm blir fjerna</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>df</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.vind_regn">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">vind_regn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.vind_regn" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Tar in vinddataframe, og returnerer ny dataframe med der regn (rrl) under 0.2mm blir fjerna</p>
-<p>Bruker rrl istedenfor rr, da rr er nedbør, mens rrl er regn fra NVE Grid Times Series API</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>df</strong> – Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe der dager med regn (rrl) under 0.2mm blir fjerna</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>df</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.vind_sno_fsw">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">vind_sno_fsw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.vind_sno_fsw" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Tar in vinddataframe, og returnerer ny dataframe med der nysnø under 0.2mm blir fjerna</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>df</strong> – Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe der dager med nysnø under 0.2mm blir fjerna</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>df</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="klimadata.klimadata.vind_sno_rr_tm">
-<span class="sig-prename descclassname"><span class="pre">klimadata.klimadata.</span></span><span class="sig-name descname"><span class="pre">vind_sno_rr_tm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#klimadata.klimadata.vind_sno_rr_tm" title="Permalink til denne definisjonen">¶</a></dt>
-<dd><p>Tar in vinddataframe, og returnerer ny dataframe med der nedbør under 0.2mm og temperatur under 1 grad blir fjerna</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parametere<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>df</strong> – Pandas dataframe med klimadata</p>
-</dd>
-<dt class="field-even">Returnere<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pandas dataframe der dager med nedbør under 0.2mm og temperatur blir fjerna</p>
-</dd>
-<dt class="field-odd">Retur type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>df</p>
-</dd>
-</dl>
+</div></blockquote>
+</section>
 </dd></dl>
 
 </section>

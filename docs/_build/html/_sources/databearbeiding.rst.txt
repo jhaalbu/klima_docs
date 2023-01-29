@@ -2,5 +2,28 @@ Datanedlasting
 --------------------------------------------
 Forklaring på dei enkelte funksjoner som genererer klimadata fra NVI sitt api.
 
-.. automodule:: klimadata.klimadata
-    :members:
+.. py:function:: nve_api(x: str, y: str, startdato: str, sluttdato: str, para: str) -> list
+    
+    Henter data frå NVE api GridTimeSeries
+
+    Parameters
+    ----------
+        lon 
+            øst koordinat (i UTM33)
+        lat  
+            nord koordinat (i UTM33)
+        startdato
+            startdato for dataserien som hentes ned
+        sluttdato 
+            sluttdato for dataserien som hentes ned
+        para
+            kva parameter som skal hentes ned f.eks rr for nedbør
+
+    Returns
+    ----------
+        verdier
+            returnerer ei liste med klimaverdier
+
+
+.. .. automodule:: klimadata.klimadata
+..     :members:

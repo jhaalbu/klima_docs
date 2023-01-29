@@ -10,11 +10,14 @@ import streamlit as st
 def nve_api(x: str, y: str, startdato: str, sluttdato: str, para: str) -> list:
     """Henter data frå NVE api GridTimeSeries
 
+    Funksjonen henter ned data frå eit gitt punkt, med gitt start og slutt dato.
+    Denne funksjonen henter kunn ned ein parameter.
+
     Parameters
     ----------
-        lon 
+        x 
             øst koordinat (i UTM33)
-        lat  
+        y  
             nord koordinat (i UTM33)
         startdato
             startdato for dataserien som hentes ned
