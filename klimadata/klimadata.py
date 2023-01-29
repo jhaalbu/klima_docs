@@ -6,6 +6,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 
+'''Funksjonar for å hente ned data frå NVE api GridTimeSeries og enkel bearbeiding før plotting
+Modulen tek i bruk streamlit cache for å redusere antall kall til api
+'''
+
 @st.cache
 def nve_api(x: str, y: str, startdato: str, sluttdato: str, para: str) -> list:
     """Henter data frå NVE api GridTimeSeries
@@ -110,16 +114,18 @@ def hent_data_klima_dogn(x: str, y: str, startdato: str, sluttdato: str, paramet
     return parameterdict
 
 
-def klima_dataframe(x, y, startdato, sluttdato, parametere) -> pd.DataFrame:
+def klima_dataframe(x: str, y: str, startdato: str, sluttdato: str, parametere: list) -> pd.DataFrame:
     """Lager dataframe basert på klimadata fra NVE api.
 
+    Bruker programpakken pandas for å samle klimadata i ein dataframe.
+    Dette forenkler videre behandling av data og plotting.
     Bruker start og sluttdato for å generere index i pandas dataframe.
 
     Parameters
     ----------
-        lon
+        x
             øst-vest koordinat (i UTM33)
-        lat
+        y
             nord-sør koordinat (i UTM33)
         startdato
             startdato for dataserien som hentes ned
