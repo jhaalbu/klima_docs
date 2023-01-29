@@ -14,8 +14,8 @@ author = 'Jan Helge Aalbu'
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..\..'))
-#sys.path.insert(0, os.path.abspath('..\..\klimadata'))
-#sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('..\..\klimadata'))
+sys.path.insert(0, os.path.abspath('..'))
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
