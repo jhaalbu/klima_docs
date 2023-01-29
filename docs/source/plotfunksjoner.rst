@@ -2,7 +2,7 @@ Plotfunksjoner
 -------------------------------
 Forklaring på dei forskjellige funksjoner som genererer plot.
 
-
+Funksjonene ligger i plot.py
 
 .. py:function:: plot_normaler(klima: pd.DataFrame, ax1=None) -> plt.Axes:
     

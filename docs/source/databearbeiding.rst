@@ -3,6 +3,9 @@ Datanedlasting
 Forklaring på dei enkelte funksjoner som genererer klimadata fra NVI sitt api.
 
 
+Funksjonene ligger i kliamadata.py
+
+
 .. py:function:: klima_dataframe(x: str, y: str, startdato: str, sluttdato: str, parametere: list) -> pd.DataFrame:
     
     Lager dataframe basert på klimadata fra NVE api.
