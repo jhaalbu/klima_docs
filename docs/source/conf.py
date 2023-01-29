@@ -14,8 +14,8 @@ author = 'Jan Helge Aalbu'
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..\..'))
-sys.path.insert(0, os.path.abspath('..\..\klimadata'))
-sys.path.insert(0, os.path.abspath('..'))
+#sys.path.insert(0, os.path.abspath('..\..\klimadata'))
+#sys.path.insert(0, os.path.abspath('..'))
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -33,3 +33,17 @@ language = 'nb_NO'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['..\_static']
 
+autodoc_mock_imports = ["folium",
+    "matplotlib",
+    "numba",
+    "numdifftools",
+    "numpy",
+    "pandas",
+    "pyextremes",
+    "pyproj",
+    "requests",
+    "scipy",
+    "streamlit",
+    "streamlit_folium",
+    "windrose"
+]
