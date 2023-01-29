@@ -38,18 +38,26 @@ Videre gir den moglegheit for å velje forskjellige type sampleplot
 
 Klimaoversikt:
 
-   * Gjennomsnittleg månedstemperatur og nedbør.
+.. image:: ../images/klimaoversikt.png
+    :width: 400
 
-   * Fordeling av snømengde gjennom året, med snitt, max og min sammen med temperatur.
+Det er 4 underplot:
 
-   * Åresnedbør tilbake i tid.
+   + Gjennomsnittleg månedstemperatur og nedbør.
 
-   * Årleg maksimal snødjupne tilbake i tid.
+   + Fordeling av snømengde gjennom året, med snitt, max og min sammen med temperatur.
+
+   + Åresnedbør tilbake i tid.
+
+   + Årleg maksimal snødjupne tilbake i tid.
 
 
 Klimaoversikt med 3 døgn snø og returverdi:
 
-Dette gir dei samme plotta som for klimaoversikt men i tilleg:
+.. image:: ../images/klimaoversikt_sno.png
+    :width: 400
+
+Dette gir dei samme plotta som for klimaoversikt men i tillegg:
 
    + 3 døgns snø mengde
 
